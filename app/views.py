@@ -103,7 +103,7 @@ def project_detail(request, pk):
 
 @api_view(["GET"])
 def my_certifications(request):
-    data = Certification.objects.values("title", "institute", "description")
+    data = Certification.objects.values("title", "institute", "description", "image", "pdf_file")
     return Response(data)
 
 

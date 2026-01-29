@@ -43,6 +43,8 @@ class Certification(models.Model):
     title = models.CharField(max_length=150)
     institute = models.CharField(max_length=150)
     description = models.TextField()
+    image=models.ImageField(upload_to='certificate_image', blank=True, null=True)
+    pdf_file=models.URLField(blank=True, null=True)
 
     def __str__(self):
         return self.title
